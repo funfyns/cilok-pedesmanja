@@ -32,7 +32,7 @@ contactForm.addEventListener('submit', function(event) {
     const whatsappNumber = '6285813136729'; //  nomor WhatsApp 
 
     // Buat pesan 
-    const message = `Halo Cilok Pedes Manja!kelihannya enak tuh, saya boleh pesan kaka ${name}%0AEmail: ${email}%0ANo. HP: ${phone}%0A%0ATerima kasih!`;
+    const message = `Halo Cilok Pedes Manja!kelihannya enak tuh, saya boleh pesan dengan nama ${name}Email: ${email}No. HP: ${phone}Terima kasih!`;
 
     // Encode pesan untuk URL
     const encodedMessage = encodeURIComponent(message);
