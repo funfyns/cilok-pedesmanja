@@ -29,10 +29,10 @@ contactForm.addEventListener('submit', function(event) {
     const phone = document.getElementById('phoneInput').value;
 
     // Definisikan nomor WhatsApp 
-    const whatsappNumber = '6285813136729'; //  nomor WhatsApp 
+    const whatsappNumber = '6282131867805'; //  nomor WhatsApp 
 
     // Buat pesan 
-    const message = `Halo Cilok Pedes Manja!kelihannya enak tuh, saya boleh pesan dengan nama ${name}Email: ${email}No. HP: ${phone}Terima kasih!`;
+    const message = `Halo Cilok Pedes Manja!kelihannya enak tuh, saya boleh pesan dengan nama ${name} Email: ${email} No. HP: ${phone} Terima kasih!`;
 
     // Encode pesan untuk URL
     const encodedMessage = encodeURIComponent(message);
