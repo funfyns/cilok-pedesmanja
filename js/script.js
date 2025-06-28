@@ -15,6 +15,27 @@ document.addEventListener('click', function(e) {
     }
 });
 
+
+// --- WhatsApp Order Functionality ---
+const orderButtons = document.querySelectorAll('.order-now-btn');
+const whatsappNumber = '6281234567890'; // Replace with your WhatsApp number (e.g., 6281234567890 for Indonesia)
+
+orderButtons.forEach(button => {
+    button.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent the default link behavior
+
+        const menuCard = this.closest('.menu-card'); // Get the parent menu card
+        const itemName = menuCard.querySelector('.menu-card-title').innerText.replace(/-/g, '').trim(); // Get item name, clean up extra hyphens
+        const itemPrice = menuCard.querySelector('.menu-card-price').innerText.trim(); // Get item price
+
+        const message = encodeURIComponent(`Halo, saya ingin pesan: ${itemName} (${itemPrice}). Mohon info selanjutnya.`);
+        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
+
+        window.open(whatsappUrl, '_blank'); // Open WhatsApp in a new tab/window
+    });
+});
+
+
 // Dapatkan elemen form kontak
 const contactForm = document.getElementById('contactForm');
 
